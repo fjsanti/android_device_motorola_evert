@@ -14,9 +14,9 @@
 # limitations under the License.
 #
 
-# Inherit some common Lineage stuff.
+# Inherit some common Havoc stuff.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/havoc/config/common.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -68,7 +68,7 @@ endif
 
 # Device identifiers
 PRODUCT_DEVICE := evert
-PRODUCT_NAME := lineage_evert
+PRODUCT_NAME := havoc_evert
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := Moto G6 Plus
 PRODUCT_MANUFACTURER := Motorola
@@ -77,4 +77,11 @@ PRODUCT_RELEASE_NAME := evert
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=evert
 
-BUILD_FINGERPRINT := motorola/evert/evert:8.0.0/OPW27.113-45/53:user/release-keys
+BUILD_FINGERPRINT := motorola/evert/evert:9/PPWS29.116-11-2/00cb:user/release-keys
+
+# Official
+export export HAVOC_BUILD_TYPE=Official
+
+#device maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+ 	ro.havoc.maintainer=fJSanti
