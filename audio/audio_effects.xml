@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <audio_effects_conf version="2.0" xmlns="http://schemas.android.com/audio/audio_effects_conf/v2_0">
     <libraries>
+        <library name="dsplus" path="libdseffect.so"/><!--dsplus-->
         <library name="proxy" path="libeffectproxy.so"/>
         <library name="mmieffects" path="libmmieffectswrapper.so"/>
         <library name="mot_speaker_helper" path="libspeakerbundle.so"/>
@@ -14,6 +15,7 @@
         <library name="dap" path="libswdap.so"/>
     </libraries>
     <effects>
+        <effect name="dsplus" library="dsplus" uuid="9d4921da-8225-4f29-aefa-39537a04bcaa"/><!--dsplus-->
         <effect name="bassboost" library="bundle" uuid="8631f300-72e2-11df-b57e-0002a5d5c51b"/>
         <effect name="virtualizer" library="bundle" uuid="1d4033c0-8557-11df-9f2d-0002a5d5c51b"/>
         <effect name="equalizer" library="bundle" uuid="ce772f20-847d-11df-bb17-0002a5d5c51b"/>
@@ -40,7 +42,7 @@
     </effects>
     <postprocess>
         <stream type="music">
-            <apply effect="music_helper"/>
+            <!--<apply effect="music_helper"/>-->
         </stream>
         <stream type="ring">
             <apply effect="ring_helper"/>
