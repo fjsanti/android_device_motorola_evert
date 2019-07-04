@@ -77,11 +77,4 @@ PRODUCT_RELEASE_NAME := evert
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=evert
 
-BUILD_FINGERPRINT := motorola/evert/evert:9/PPWS29.116-11-2/00cb:user/release-keys
-
-# Official
-export export HAVOC_BUILD_TYPE=Official
-
-#device maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
- 	ro.havoc.maintainer=fJSanti
+BUILD_FINGERPRINT := motorola/evert/evert:9/PPWS29.116-16-6/5cbfe:user/release-keys
